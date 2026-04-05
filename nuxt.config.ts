@@ -3,6 +3,11 @@ import { pwa } from './app/config/pwa'
 import { appDescription } from './app/constants/index'
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  runtimeConfig: {
+    public: {
+      apiBase: 'http://localhost:4000/tasksManager/tasks'
+    }
+  },
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   modules: ['@nuxt/eslint', '@nuxt/ui', 'shadcn-nuxt', '@vite-pwa/nuxt', '@vueuse/nuxt', '@pinia/nuxt'],
